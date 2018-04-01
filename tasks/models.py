@@ -5,4 +5,6 @@ class Task(models.Model):
     created_date = models.DateTimeField('date created')
     due_date = models.DateTimeField('due date')
     completed = models.BooleanField()
-
+    
+    def __str__(self):
+        return self.content

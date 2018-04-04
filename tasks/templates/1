@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  {% include "header.html" %}
+
+  {% if tasks_list %}
+    <ul>
+    {% for task in tasks_list %}
+    <li><a href="{% url 'tasks:detail' task.id %}">{{ task.content }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <p>No tasks available.</p>
+  {% endif %}
+</html>

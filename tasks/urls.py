@@ -1,4 +1,5 @@
 from django.urls import path
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from . import views
 
@@ -10,3 +11,5 @@ urlpatterns = [
     path('<int:task_id>/delete', views.delete, name='delete'),
     path('<int:task_id>/complete', views.complete, name='complete')
 ]
+
+urlpatterns += staticfiles_urlpatterns()

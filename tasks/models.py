@@ -9,3 +9,11 @@ class Task(models.Model):
     
     def __str__(self):
         return self.content
+        
+    @property
+    def fmt_due_date(self):
+        return self.due_date.strftime("%m/%d/%Y")
+        
+    @property
+    def fmt_completed(self):
+        return "Yes" if self.completed else "No"

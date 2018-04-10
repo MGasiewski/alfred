@@ -16,11 +16,28 @@ function deleteTask(taskId){
     csrfmiddlewaretoken : csrfToken
     }
   }).done(function(data){
-    let response = JSON.parse(data);
-    if(response["result"] === "success"){
+    if(data["result"] === "success"){
       $("#task_" + taskId).remove();
     }
   });
+}
+
+function createTask(content, due_date, completed){
+    $.ajax({
+        url: "create/",
+        method: "POST",
+        data:{
+            csrfmiddlewaretoken: csrfToken,
+            task_content: content,
+            task_due_date: due_date,
+            task_completed: completed
+        }
+    }).done(function(data){
+        task = new Task(data.id, data.content, data.created_date, data.due_date, data.completed, data.deleted);
+        tasks.push(task);
+        console.log(task);
+        window.location.reload();
+    });
 }
 
 function strikeTask(taskId){
@@ -36,12 +53,12 @@ function completeTask(taskId){
     }
   }).done(function(data){
     if(data["result"] === "success"){
-      let currentAnswer = $("#completed_" + taskId).text();
+      let currentAnswer = $("#task_completed_" + taskId).text();
       if(currentAnswer === "Yes"){
-        $("#completed_" + taskId).text("No");
+        $("#task_completed_" + taskId).text("No");
         $("#completed_input_" + taskId).val("No");
       }else{
-        $("#completed_" + taskId).text("Yes");
+        $("#task_completed_" + taskId).text("Yes");
         $("#completed_input_" + taskId).val("Yes");
         strikeTask(taskId);
       }
@@ -60,10 +77,22 @@ function editTask(taskId){
     data: updateDetails,
     method: 'POST'
   }).done(function(data){
-
+    updateTaskElements(data);
   });
 }
-  
+
+function updateTaskElements(data){
+    task = tasks.filter(function(t){
+        return t.id === data.id;
+    });
+    task[0].content = data.content;
+    task[0].due_date = data.due_date;
+    task[0].completed = data.completed ? "Yes" : "No";
+    $("#task_content_" + task[0].id).text(task[0].content);
+    $("#task_due_date_" + task[0].id).text(task[0].due_date);
+    $("#task_completed_" + task[0].id).text(task[0].completed);
+}
+
 function attachCallbacks(taskId){
   $("#edit_" + taskId).unbind();
   $("#edit_" + taskId).click(function(){
@@ -97,4 +126,15 @@ $(document).ready(function(){
   for(var i = 0; i<idList.length; i++){
     attachCallbacks(idList[i]);
   }
+  $("#add_task_button").click(function(){
+    $("#new_content").val("");
+    $("#new_due_date").val("");
+    $("#new_completed").val("No");
+  });
+  $("#create_new_task").click(function(){
+    let content = $("#new_content").val();
+    let due_date = $("#new_due_date").val();
+    let completed = $("#new_completed").val();
+    createTask(content, due_date, completed);
+  });
 });

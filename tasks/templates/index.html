@@ -7,12 +7,11 @@
     <section class="jumbotron text-center">
         <div class="container">
             <h1 class="jumbotron-heading">Tasks</h1>
-            <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator,
-                etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+            <p class="lead text-muted">Keep track of tasks that you need to complete.</p>
         </div>
     </section>
     <div class="container">
-        <table class="table table-striped">
+        <table id="task_table" class="table table-striped">
             <thead>
             <tr>
                 <th>Task</th>
@@ -26,9 +25,9 @@
             <tbody>
             {% for task in tasks_list %}
             <tr id="task_{{ task.id }}">
-                <td>{{ task.content }}</td>
-                <td>{{ task.fmt_due_date }}</td>
-                <td id="completed_{{ task.id }}">{{ task.fmt_completed }}</td>
+                <td id="task_content_{{ task.id }}">{{ task.content }}</td>
+                <td id="task_due_date_{{ task.id }}">{{ task.fmt_due_date }}</td>
+                <td id="task_completed_{{ task.id }}">{{ task.fmt_completed }}</td>
                 <td>
                     <button type="button" class="btn btn-sm btn-outline-secondary" id="edit_button_{{ task.id }}"
                             data-toggle="modal" data-target="#edit_modal_{{ task.id }}"><i
@@ -76,7 +75,7 @@
                 <input type="text" class="datepicker" id="due_date_input_{{ task.id }}"/><br><br>
                 Completed:
                 <div class="form-group">
-                    <select id="completed_input_{{ task.id }}" style="width: 100px; ">
+                    <select id="completed_input_{{ task.id }}">
                         <option>Yes</option>
                         <option>No</option>
                     </select>
@@ -128,7 +127,10 @@
                 Due Date:&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="text" class="datepicker" id="new_due_date"/><br><br>
                 Completed:&nbsp;
-                <input type="text" id="new_completed"/>
+                <select id="new_completed">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
             </div>
             <div class="modal-footer">
                 <button type="button" id="create_new_task" class="btn btn-default" data-dismiss="modal">Create</button>

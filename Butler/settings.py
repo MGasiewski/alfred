@@ -16,7 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ('C:/py_workspace_/alfred/static/',
+STATICFILES_DIRS = ('C:/py_workspace/alfred/static/',
 )
 STATICFILES_FINDER = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -39,6 +39,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'tasks.apps.TasksConfig',
+    'shopping.apps.ShoppingConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

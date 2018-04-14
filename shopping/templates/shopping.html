@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+{% include "head.html" %}
+<body style="padding-top: 70px;">
+{% include "header.html" %}
+<main role="main" class="container">
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Shopping List</h1>
+            <p class="lead text-muted">Keep track of the items you need to buy.</p>
+        </div>
+    </section>
+    <div class="container">
+        {% if store_list %}
+        {% for store in store_list %}
+        <h2 class="text-center">{{ store.sname }}</h2>
+        <table id="product_table" class="table table-striped">
+            <thead>
+            <tr>
+                <th class="purchase_header">Purchased?</th>
+                <th class="product_header">Product</th>
+                <th class="quantity_header">Quantity</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% if product_list %}
+            {% for product in product_list %}
+            {% if product.store.sname == store.sname %}
+            <tr id="product_{{ product.id }}">
+                <td id="product_purchased_{{ product.id }}">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" id="purchased_button_{{ product.id }}"><i
+                            class="fas fa-check"></i></button>
+                </td>
+                <td id="product_name_{{ product.id }}">{{ product.pname }}</td>
+                <td id="product_quantity_{{ product.id }}">{{ product.quantity }}</td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            </tbody>
+        </table>
+        {% endfor %}
+        {% endif %}
+    </div>
+</main>
+{% include "shopping_footer.html" %}
+</body>
+<script>
+  var csrfToken = '{{ csrf_token }}';
+
+  {% for product in product_list %}
+  //TODO add product vars
+  {% endfor %}
+</script>
+</html>

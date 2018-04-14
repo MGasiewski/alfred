@@ -15,12 +15,6 @@ def index(request):
 
 
 @login_required
-def detail(request, task_id):
-    task = get_object_or_404(Task, pk=task_id)
-    return render(request, 'detail.html', {'task': task})
-
-
-@login_required
 def edit(request, task_id):
     response = process_edit(request, task_id)
     return JsonResponse(response)

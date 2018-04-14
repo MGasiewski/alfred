@@ -5,19 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="889c9101-692a-45b1-a873-3c9e069c7c3f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/registration/logged_out.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/password_change_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/password_change_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/password_reset_complete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/password_reset_confirm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/password_reset_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/password_reset_email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/password_reset_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopping/static/shopping.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopping/static/shopping.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopping/templates/shopping_footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Butler/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Butler/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Butler/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Butler/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,29 +27,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shopping/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Butler/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shopping/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shopping.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/shopping/templates/shopping.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shopping_footer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shopping/templates/shopping_footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tasks.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tasks/static/tasks.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="9" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shopping.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shopping/static/shopping.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shopping.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shopping/static/shopping.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Butler/urls.py">
+        <entry file="file://$PROJECT_DIR$/shopping/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="password_change_form.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/registration/password_change_form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="password_change_done.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/registration/password_change_done.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="187">
+              <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,6 +135,7 @@
       <find>django.contrib.auth</find>
       <find>TEMPLATEs</find>
       <find>LOGIN_</find>
+      <find>static</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -81,37 +144,48 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tasks/urls.py" />
         <option value="$PROJECT_DIR$/tasks/processes.py" />
         <option value="$PROJECT_DIR$/tasks/templates/footer.html" />
         <option value="$PROJECT_DIR$/tasks/static/tasks.js" />
-        <option value="$PROJECT_DIR$/tasks/templates/index.html" />
         <option value="$PROJECT_DIR$/login/urls.py" />
-        <option value="$PROJECT_DIR$/Butler/urls.py" />
-        <option value="$PROJECT_DIR$/Butler/settings.py" />
-        <option value="$PROJECT_DIR$/tasks/views.py" />
         <option value="$PROJECT_DIR$/templates/registration/logged_out.html" />
         <option value="$PROJECT_DIR$/templates/registration/password_reset_done.html" />
         <option value="$PROJECT_DIR$/templates/registration/password_reset_email.html" />
         <option value="$PROJECT_DIR$/templates/registration/password_reset_confirm.html" />
         <option value="$PROJECT_DIR$/templates/registration/password_reset_complete.html" />
         <option value="$PROJECT_DIR$/templates/registration/password_reset_form.html" />
-        <option value="$PROJECT_DIR$/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/templates/registration/password_change_form.html" />
         <option value="$PROJECT_DIR$/templates/registration/password_change_done.html" />
+        <option value="$PROJECT_DIR$/tasks/templates/header.html" />
+        <option value="$PROJECT_DIR$/tasks/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/tasks/models.py" />
+        <option value="$PROJECT_DIR$/tasks/views.py" />
+        <option value="$PROJECT_DIR$/tasks/urls.py" />
+        <option value="$PROJECT_DIR$/shopping/templates/index.html" />
+        <option value="$PROJECT_DIR$/Butler/urls.py" />
+        <option value="$PROJECT_DIR$/shopping/models.py" />
+        <option value="$PROJECT_DIR$/Butler/settings.py" />
+        <option value="$PROJECT_DIR$/shopping/urls.py" />
+        <option value="$PROJECT_DIR$/shopping/views.py" />
+        <option value="$PROJECT_DIR$/shopping/templates/shopping_footer.html" />
+        <option value="$PROJECT_DIR$/tasks/static/shopping.css" />
+        <option value="$PROJECT_DIR$/shopping/static/shopping.js" />
+        <option value="$PROJECT_DIR$/shopping/templates/shopping.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="951" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -127,25 +201,49 @@
             <path>
               <item name="alfred" type="b2602c69:ProjectViewProjectNode" />
               <item name="alfred" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alfred" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alfred" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alfred" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alfred" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="alfred" type="b2602c69:ProjectViewProjectNode" />
               <item name="alfred" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="registration" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alfred" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alfred" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tasks/templates/index.html" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\py_workspace\alfred\shopping\static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\py_workspace\alfred\shopping\templates" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -193,26 +291,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="830" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32724902" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16589557" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27057183" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32905984" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26923078" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.35285914" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32905984" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35285914" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -273,6 +371,27 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Butler/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registration/password_change_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registration/password_change_done.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tasks/processes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -294,9 +413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="4" column="85" selection-start-line="4" selection-start-column="85" selection-end-line="4" selection-end-column="85" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -328,9 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Butler/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/http/response.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
@@ -352,49 +465,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/templates/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="3" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/tasks/processes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/static/tasks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2227">
-          <caret line="131" column="31" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2288">
-          <caret line="135" selection-start-line="135" selection-end-line="136" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/registration/logged_out.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -417,37 +493,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/password_reset_complete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Butler/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="29" column="3" selection-start-line="29" selection-end-line="29" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/registration/password_reset_confirm.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -458,17 +507,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Butler/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/registration/password_change_done.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -479,10 +521,153 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/password_change_done.html">
+    <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="51">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registration/password_reset_complete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Butler/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="36" selection-start-line="36" selection-end-line="38" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/templates/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Butler/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/templates/head.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping/static/shopping.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/static/tasks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping/static/shopping.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping/templates/shopping_footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping/templates/shopping.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

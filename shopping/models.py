@@ -12,6 +12,8 @@ class Product(models.Model):
     quantity = models.IntegerField(default=1)
     pname = models.CharField(max_length=200)
     store = models.ForeignKey(Store, on_delete=models.CASCADE, default=1)
+    completed = models.BooleanField(default=False)
+    purchased = models.BooleanField(default=False)
 
     def __str__(self):
         return str(self.quantity) + " " + self.pname

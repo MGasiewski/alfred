@@ -47,9 +47,10 @@
 </body>
 <script>
   var csrfToken = '{{ csrf_token }}';
-
+  var productList = [];
+  $("#shopping_li").addClass("active");
   {% for product in product_list %}
-  //TODO add product vars
+  productList.push(new Product({{ product.id }}, "{{ product.pname }}", {{ product.quantity }}, {{ product.purchased }}, {{ product.completed }}, "{{ product.store.sname }}"));
   {% endfor %}
 </script>
 </html>

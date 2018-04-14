@@ -56,7 +56,7 @@
   {% for task in tasks_list %}
     tasks.push( new Task({{ task.id }}, "{{ task.content }}", "{{ task.created_date }}", "{{ task.fmt_due_date }}", "{{ task.fmt_completed }}", "{{ task.deleted }}" ));
   {% endfor %}
-
+  $("#task_li").addClass("active");
 </script>
 </body>
 {% for task in tasks_list %}

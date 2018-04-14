@@ -133,3 +133,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/tasks/'
+LOGOUT_REDIRECT_URL = '/accounts/login/'
+
+# Session config
+# 30 minute session. Clock resets at every request
+SESSION_SAVE_EVERY_REQUEST = True
+SESSION_COOKIE_AGE = 1800

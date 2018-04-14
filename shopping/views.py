@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 from .models import Product, Store
 from django.contrib.auth.decorators import login_required
-
+from .processes import process_purchase
 
 @login_required
 def index(request):
@@ -16,12 +16,13 @@ def index(request):
 
 
 @login_required
-def purchase(request, task_id):
-    pass
+def purchase(request, product_id):
+    result = process_purchase(product_id)
+    return JsonResponse(result)
 
 
 @login_required
-def delete(request, task_id):
+def complete(request, task_id):
     pass
 
 

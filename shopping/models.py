@@ -17,3 +17,11 @@ class Product(models.Model):
 
     def __str__(self):
         return str(self.quantity) + " " + self.pname
+
+    @property
+    def fmt_completed(self):
+        return "true" if self.completed else "false"
+
+    @property
+    def fmt_purchased(self):
+        return "true" if self.purchased else "false"

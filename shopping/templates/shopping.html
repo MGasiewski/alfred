@@ -25,7 +25,7 @@
             <tbody>
             {% if product_list %}
             {% for product in product_list %}
-            {% if product.store.sname == store.sname %}
+            {% if product.store.sname == store.sname and not product.completed %}
             <tr id="product_{{ product.id }}">
                 <td id="product_purchased_{{ product.id }}">
                     <button type="button" class="btn btn-sm btn-outline-secondary" id="purchased_button_{{ product.id }}"><i
@@ -39,18 +39,122 @@
             {% endif %}
             </tbody>
         </table>
+        <button type="button" class="btn btn-primary my-2" id="add_product_button_{{ store.id }}" data-toggle="modal"
+                data-target="#add_product_modal">Add product
+        </button>
+        <button type="button" class="btn btn-primary my-2" id="clear_list_{{ store.id }}" data-toggle="modal"
+                data-target="#clear_list_modal">Clear List
+        </button>
         {% endfor %}
         {% endif %}
     </div>
+    <br>
+    <button type="button" class="btn btn-primary my-2" id="add_store" data-toggle="modal"
+                data-target="#add_store_modal">Add Store
+    </button>
 </main>
 {% include "shopping_footer.html" %}
 </body>
 <script>
   var csrfToken = '{{ csrf_token }}';
   var productList = [];
+  var storeList = [];
   $("#shopping_li").addClass("active");
   {% for product in product_list %}
-  productList.push(new Product({{ product.id }}, "{{ product.pname }}", {{ product.quantity }}, {{ product.purchased }}, {{ product.completed }}, "{{ product.store.sname }}"));
+  productList.push(new Product({{ product.id }}, "{{ product.pname }}", {{ product.quantity }}, {{ product.fmt_purchased }}, {{ product.fmt_completed }}, "{{ product.store.sname }}"));
+  {% endfor %}
+  {% for store in store_list %}
+  storeList.push(new Store({{ store.id }}, "{{ store.sname }}"));
   {% endfor %}
 </script>
+
+<div class="modal fade" id="add_store_modal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Store</h4>
+            </div>
+            <div id="store_name_div">
+                Store Name:
+                <input type="text" id="store_name_input"/>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="add_store_button" data-dismiss="modal">Add Store
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="add_product_modal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Product</h4>
+            </div>
+            <div class="modal-body">
+                Product Name:
+                <div id="name_div">
+                    <input type="text" id="product_name"/><br><br>
+                </div>
+                Quantity:
+                <div id="quantity_div">
+                    <select id="product_quantity">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select><br><br>
+                </div>
+                Store:
+                <div id="store_div">
+                    <select id="store_name">
+                    {% for store in store_list %}
+                        <option value="{{ store.id }}">{{ store.sname }}</option>
+                    {% endfor %}
+                    </select><br><br>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="add_product" class="btn btn-default" data-dismiss="modal">Add Item
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="modal fade" id="clear_list_modal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="clear_modal_title"></h4>
+            </div>
+            <div class="modal-body">
+                <h5>Are you sure you want to clear this list?</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="clear_list_button" data-dismiss="modal">Clear
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 </html>

@@ -147,3 +147,7 @@ LOGOUT_REDIRECT_URL = '/accounts/login/'
 # 30 minute session. Clock resets at every request
 SESSION_SAVE_EVERY_REQUEST = True
 SESSION_COOKIE_AGE = 1800
+
+# Configured Django
+import django_heroku
+django_heroku.settings(locals())

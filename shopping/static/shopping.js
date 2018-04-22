@@ -119,7 +119,7 @@ function attachAddItemCallback(){
                 csrfmiddlewaretoken: csrfToken,
                 productName: $("#product_name").val(),
                 productQuantity: $("#product_quantity").val(),
-                productStoreName: $("#store_name").val()
+                productStoreName: $("#store_name").text().trim()
             }
         }).done(function(data){
             if(data["result"] == "failure"){

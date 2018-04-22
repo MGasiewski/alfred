@@ -63,7 +63,7 @@ ROOT_URLCONF = 'Butler.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['alfred/templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')] ,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,14 +83,22 @@ WSGI_APPLICATION = 'Butler.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
+    'default':{
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'alfred',
-        'USER': 'root',
-        'PASSWORD': 'MY!sigma125',
+        'USER': 'testuser',
+        'PASSWORD': 'test',
         'HOST': 'localhost',
-        'PORT': '3306',
-    }
+        'PORT': '',
+        }
+  #  'windows/mysql': {
+  #      'ENGINE': 'django.db.backends.mysql',
+  #      'NAME': 'alfred',
+  #      'USER': 'root',
+  #      'PASSWORD': 'MY!sigma125',
+  #      'HOST': 'localhost',
+  #      'PORT': '3306',
+  #  }
 }
 
 

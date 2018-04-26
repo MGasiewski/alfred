@@ -85,11 +85,11 @@ WSGI_APPLICATION = 'Butler.wsgi.application'
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'alfred',
-        'USER': 'testuser',
-        'PASSWORD': 'test',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'd44a132mev46n',
+        'USER': 'nveloszcycosxw',
+        'PASSWORD': 'cc7cf838475d0f464b639c18e54e9d1cb7f3fb3624a4d682af49863798755a6c',
+        'HOST': 'postgres://nveloszcycosxw:cc7cf838475d0f464b639c18e54e9d1cb7f3fb3624a4d682af49863798755a6c@ec2-54-235-193-34.compute-1.amazonaws.com:5432/d44a132mev46n',
+        'PORT': '5432',
         }
   #  'windows/mysql': {
   #      'ENGINE': 'django.db.backends.mysql',

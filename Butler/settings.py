@@ -85,11 +85,8 @@ WSGI_APPLICATION = 'Butler.wsgi.application'
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'alfred',
-        'USER': 'testuser',
-        'PASSWORD': 'test',
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': os.environ['DATABASE_URL'],
+        'PORT': '5432',
         }
   #  'windows/mysql': {
   #      'ENGINE': 'django.db.backends.mysql',

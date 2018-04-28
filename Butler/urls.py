@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.contribu.auth import views
+from django.contrib.auth import views
 
 urlpatterns = [
     path('tasks/', include('tasks.urls')),

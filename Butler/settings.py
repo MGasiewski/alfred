@@ -30,11 +30,9 @@ STATICFILES_FINDER = [
 SECRET_KEY = 'ne&gnihe1dh=+*3@e11*og8r%)q^7l$lfsv!ey51!!wboc(uj*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.environ['DEBUG_MODE'] == 'true' else False
+DEBUG = True
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -61,8 +59,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Butler.urls'
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 TEMPLATES = [
     {

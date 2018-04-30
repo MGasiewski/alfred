@@ -16,8 +16,8 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ('C:/py_workspace/alfred/static/',
-)
+#STATICFILES_DIRS = ('C:/py_workspace/alfred/static/',
+#)
 STATICFILES_FINDER = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -92,7 +92,7 @@ DATABASES = {
   #      'ENGINE': 'django.db.backends.mysql',
   #      'NAME': 'alfred',
   #      'USER': 'root',
-  #      'PASSWORD': 'MY!sigma125',
+
   #      'HOST': 'localhost',
   #      'PORT': '3306',
   #  }

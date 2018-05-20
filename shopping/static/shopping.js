@@ -16,6 +16,27 @@ class Store{
   }
 }
 
+function attachDeleteCallbacks(){
+  productList.forEach(function(product){
+    $("#deleted_button_" + product.id).unbind();
+    $("#deleted_button_" + product.id).click(function(){
+      deleteItem(product.id);
+    });
+  });
+}
+
+function deleteItem(prod_id){
+  $.ajax({
+    url: "delete/" + prod_id + "/",
+    method: "POST",
+    data:{
+      csrfmiddlewaretoken: csrfToken
+    }
+  }).done(function(data){
+    //TODO implement failure behavior
+  });
+}
+
 function attachCheckCallbacks(){
     productList.forEach(function(product){
         $("#purchased_button_" + product.id).unbind();

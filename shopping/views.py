@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 from .models import Product, Store
 from django.contrib.auth.decorators import login_required
-from .processes import process_purchase, process_create, process_clear_list, process_create_store
+from .processes import process_purchase, process_create, process_clear_list, process_create_store, process_delete_product, process_edit_product
 
 @login_required
 def index(request):
@@ -36,3 +36,13 @@ def create(request):
 def create_store(request):
     result = process_create_store(request)
     return JsonResponse(result)
+
+@login_required
+def delete_product(request, product_id):
+    result = process_delete_product(product_id)
+    return JsonResponse(result)
+
+@login_required
+def update(request, product_id):
+    result = process_edit_product(request, product_id)
+    return  JsonResponse(result)

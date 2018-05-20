@@ -20,6 +20,7 @@
                 <th class="purchase_header">Purchased?</th>
                 <th class="product_header">Product</th>
                 <th class="quantity_header">Quantity</th>
+                <th class="delete_header">Delete?</th>
             </tr>
             </thead>
             <tbody>
@@ -33,6 +34,8 @@
                 </td>
                 <td id="product_name_{{ product.id }}">{{ product.pname }}</td>
                 <td id="product_quantity_{{ product.id }}">{{ product.quantity }}</td>
+                <td id="product_delete_{{ product.id }}"><button type="button" class="btn btn-sm btn-outline-secondary" id="deleted_button_{{ product.id }}"><i
+                            class="fas fa-trash-alt"></i></button></td>
             </tr>
             {% endif %}
             {% endfor %}
@@ -43,7 +46,7 @@
                 data-target="#add_product_modal">Add product
         </button>
         <button type="button" class="btn btn-primary my-2" id="clear_list_{{ store.id }}" data-toggle="modal"
-                data-target="#clear_list_modal">Clear List
+                data-target="#clear_list_modal">Clear Completed
         </button>
         {% endfor %}
         {% endif %}

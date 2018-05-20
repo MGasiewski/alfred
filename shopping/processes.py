@@ -4,8 +4,9 @@ SUCCESS = {"result": "success"}
 FAILURE = {"result": "failure"}
 
 
-def process_purchase(product_id: int):
-    count = Product.objects.filter(id=product_id).update(purchased=True)
+def process_purchase(product_id):
+    prod = Product.objects.get(id=product_id)
+    count = Product.objects.filter(id=product_id).update(purchased=not prod.purchased)
     return SUCCESS if count == 1 else FAILURE
 
 
@@ -17,10 +18,20 @@ def process_create(request):
     count = Product.objects.create(pname=req_product_name, quantity=req_quantity, store=store)
     return SUCCESS if count == 1 else FAILURE
 
+def process_delete_product(product_id):
+    prod = Product.objects.get(id=product_id)
+    prod.delete()
+    return SUCCESS
 
-def process_clear_list(store_id: int):
+def process_edit_product(request, product_id):
+    req_product_name = request.POST["productName"]
+    req_product_quantity = request.POST["productQuantity"]
+    count = Product.objects.filter(id=product_id).update(pname=req_product_name, quantity=req_product_quantity)
+    return SUCCESS if count == 1 else FAILURE
+
+def process_clear_list(store_id):
     s = Store.objects.get(id=store_id)
-    result = Product.objects.filter(store=s).update(completed=True)
+    result = Product.objects.filter(store=s, purchased=True).update(completed=True)
     return SUCCESS
 
 

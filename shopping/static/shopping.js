@@ -33,6 +33,7 @@ function deleteItem(prod_id){
       csrfmiddlewaretoken: csrfToken
     }
   }).done(function(data){
+    window.location.reload();
     //TODO implement failure behavior
   });
 }
@@ -165,5 +166,6 @@ $(document).ready(function(){
     attachAddItemCallback();
     attachClearListCallbacks();
     attachSetDefaultStoreCallbacks();
-    attachAddStoreCallback();
+  attachAddStoreCallback();
+  attachDeleteCallbacks();
 });

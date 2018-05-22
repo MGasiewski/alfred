@@ -28,7 +28,7 @@ function attachEditCallbacks(){
 
 function attachEditAjax(p){
     var productName = $("#edit_product_name").val();
-    var productQuantity = $("#edit_product_quantity").val();
+    var productQuantity = $("#edit_product_quantity option:selected").val();
     var productStore = $("#edit_store_name option:selected").text();
     $("#edit_product").unbind();
     $("#edit_product").click(function(){

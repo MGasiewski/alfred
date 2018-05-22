@@ -23,10 +23,9 @@ def process_delete_product(product_id):
     prod.delete()
     return SUCCESS
 
-def process_edit_product(request, product_id):
-    req_product_name = request.POST["productName"]
-    req_product_quantity = request.POST["productQuantity"]
-    count = Product.objects.filter(id=product_id).update(pname=req_product_name, quantity=req_product_quantity)
+def process_edit_product(product_id, product_name, product_quantity, product_store):
+    store = Store.objects.get(sname=product_store)
+    count = Product.objects.filter(id=product_id).update(pname=product_name, quantity=product_quantity, store=store)
     return SUCCESS if count == 1 else FAILURE
 
 def process_clear_list(store_id):
@@ -39,3 +38,4 @@ def process_create_store(request):
     req_product_name = request.POST["storeName"]
     count = Store.objects.create(sname=req_product_name)
     return SUCCESS if count == 1 else FAILURE
+

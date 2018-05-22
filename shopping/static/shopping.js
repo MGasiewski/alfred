@@ -16,6 +16,40 @@ class Store{
   }
 }
 
+function attachEditCallbacks(){
+    productList.forEach(p => {
+        $("#edit_button_" + p.id).unbind();
+        $("#edit_button_" + p.id).click(function(){
+            updateModal(p);
+            attachEditAjax(p);
+        });
+    });
+}
+
+function attachEditAjax(p){
+    var productName = $("#edit_product_name").val();
+    var productQuantity = $("#edit_product_quantity").val();
+    var productStore = $("#edit_store_name option:selected").text();
+    $("#edit_product").unbind();
+    $("#edit_product").click(function(){
+        $.ajax({
+            url: "edit/" + p.id + "/" + productName + "/" + productQuantity + "/" + productStore + "/",
+            method: "POST",
+            data:{
+                csrfmiddlewaretoken: csrfToken,
+            }
+        }).done(function(data){
+            window.location.reload();
+        });
+    });
+}
+
+function updateModal(p){
+    $("#edit_product_name").val(p.name);
+    $("#edit_product_quantity").val("op" + p.quantity);
+    $("#edit_store_name").val(p.storeName);
+}
+
 function attachDeleteCallbacks(){
   productList.forEach(function(product){
     $("#deleted_button_" + product.id).unbind();
@@ -50,7 +84,6 @@ function attachCheckCallbacks(){
 
 function attachClearListCallbacks(){
     storeList.forEach(s => {
-        console.log(s);
         $("#clear_list_" + s.id).unbind();
         $("#clear_list_" + s.id).click(function(){
             $("#clear_list_button").unbind();
@@ -124,7 +157,6 @@ function addStore(storeName){
         }
     }).done(function(data){
         if(data["result"] === "failure"){
-        console.log(data);
             //TODO implement failure behavior
         }
         window.location.reload();
@@ -168,4 +200,5 @@ $(document).ready(function(){
     attachSetDefaultStoreCallbacks();
   attachAddStoreCallback();
   attachDeleteCallbacks();
+  attachEditCallbacks();
 });

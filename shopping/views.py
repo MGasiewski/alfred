@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.http import JsonResponse
 from .models import Product, Store
 from django.contrib.auth.decorators import login_required
@@ -43,6 +43,6 @@ def delete_product(request, product_id):
     return JsonResponse(result)
 
 @login_required
-def update(request, product_id):
-    result = process_edit_product(request, product_id)
-    return  JsonResponse(result)
+def edit_product(request, product_id, product_name, product_quantity, product_store):
+    result = process_edit_product(product_id, product_name, product_quantity, product_store)
+    return JsonResponse(result)

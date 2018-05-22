@@ -27,11 +27,11 @@ function attachEditCallbacks(){
 }
 
 function attachEditAjax(p){
-    var productName = $("#edit_product_name").val();
-    var productQuantity = $("#edit_product_quantity option:selected").text();
-    var productStore = $("#edit_store_name option:selected").text();
     $("#edit_product").unbind();
     $("#edit_product").click(function(){
+        var productName = $("#edit_product_name").val();
+        var productQuantity = $("#edit_product_quantity option:selected").text();
+        var productStore = $("#edit_store_name option:selected").text();
         $.ajax({
             url: "edit/" + p.id + "/" + productName + "/" + productQuantity + "/" + productStore + "/",
             method: "POST",

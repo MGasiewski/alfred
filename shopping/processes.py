@@ -25,8 +25,12 @@ def process_delete_product(product_id):
 
 def process_edit_product(product_id, product_name, product_quantity, product_store):
     store = Store.objects.get(sname=product_store)
-    count = Product.objects.filter(id=product_id).update(pname=product_name, quantity=product_quantity, store=store)
-    return SUCCESS if count == 1 else FAILURE
+    prod = Product.objects.get(id=product_id)
+    prod.pname = product_name
+    prod.quantity = product_quantity
+    prod.store = store
+    prod.save()
+    return SUCCESS
 
 def process_clear_list(store_id):
     s = Store.objects.get(id=store_id)

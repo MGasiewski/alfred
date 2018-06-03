@@ -24,7 +24,7 @@ def process_delete_product(product_id):
     return SUCCESS
 
 def process_edit_product(product_id, product_name, product_quantity, product_store):
-    store = Store.objects.get(sname=product_store)
+    store = Store.objects.get(sname=product_store.replace("-", "/"))
     prod = Product.objects.get(id=product_id)
     prod.pname = product_name
     prod.quantity = product_quantity

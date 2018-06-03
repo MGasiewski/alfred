@@ -33,9 +33,9 @@ function attachEditAjax(p){
         var productQuantity = $("#edit_product_quantity option:selected").text();
         var productStore = $("#edit_store_name option:selected").text();
         $.ajax({
-            url: "edit/" + p.id + "/" + productName + "/" + productQuantity + "/" + productStore + "/",
+          url: "edit/" + p.id + "/" + productName + "/" + productQuantity + "/" + productStore.replace("/", "-") + "/",
             method: "POST",
-            data:{
+          data:{
                 csrfmiddlewaretoken: csrfToken,
             }
         }).done(function(data){
@@ -198,7 +198,7 @@ $(document).ready(function(){
     attachAddItemCallback();
     attachClearListCallbacks();
     attachSetDefaultStoreCallbacks();
-  attachAddStoreCallback();
-  attachDeleteCallbacks();
-  attachEditCallbacks();
+    attachAddStoreCallback();
+    attachDeleteCallbacks();
+    attachEditCallbacks();
 });

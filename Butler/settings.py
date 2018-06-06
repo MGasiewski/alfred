@@ -16,8 +16,6 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_URL = '/static/'
-#STATICFILES_DIRS = ('C:/py_workspace/alfred/static/',
-#)
 STATICFILES_FINDER = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -25,10 +23,6 @@ STATICFILES_FINDER = [
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ne&gnihe1dh=+*3@e11*og8r%)q^7l$lfsv!ey51!!wboc(uj*'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -85,17 +79,12 @@ WSGI_APPLICATION = 'Butler.wsgi.application'
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': os.environ['DATABASE_URL'],
-        'PORT': '5432',
+        'NAME': 'alfred',
+        'USER': 'testuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
         }
-  #  'windows/mysql': {
-  #      'ENGINE': 'django.db.backends.mysql',
-  #      'NAME': 'alfred',
-  #      'USER': 'root',
-
-  #      'HOST': 'localhost',
-  #      'PORT': '3306',
-  #  }
 }
 
 
